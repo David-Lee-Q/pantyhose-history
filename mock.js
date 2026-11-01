@@ -26,6 +26,14 @@ window.MOCK = (function () {
           style: { t: '成品样式', d: '按款式、丹尼数、功能三个维度系统理解丝袜分类' },
           company: { t: '企业故事', d: '杜邦、莱卡、福助、浪莎……产业变迁背后的企业传奇' },
           assistant: { t: '选购助手', d: '回答几个问题，为你匹配最适合的丝袜类型与商品' }
+        },
+        guideBand: {
+          eyebrow: '可交互小工具',
+          title: '实用科普指南',
+          sub: '丹尼模拟器、标签解读、保养指南、误区辟谣、知识小测、环保与健康——六个可以上手玩的小工具',
+          cta: '进入指南',
+          also: '另外：时间轴页底部有「文化符号 + 历史影像对比」，材料页有「材质 × 丹尼 × 场景」三维表，工艺页有「织法放大镜」，企业页有「全球产业带地图」',
+          badge: '新增'
         }
       },
       timeline: {
@@ -103,6 +111,14 @@ window.MOCK = (function () {
           style: { t: 'Styles', d: 'Understand hosiery by cut, denier, and function' },
           company: { t: 'Companies', d: 'DuPont, LYCRA, Fukuske, Langsha and more' },
           assistant: { t: 'Shopping Assistant', d: 'Answer a few questions for matched recommendations' }
+        },
+        guideBand: {
+          eyebrow: 'Interactive tools',
+          title: 'Practical Guide',
+          sub: 'Denier simulator, label decoder, care guide, myths, quick quiz, eco & health — six hands-on tools',
+          cta: 'Open the guide',
+          also: 'Also new at the bottom of pages: culture cards + before/after slider on Timeline, Material × Denier × Scene matrix on Materials, weave loupe on Manufacturing, and the global industry-belt map on Companies',
+          badge: 'New'
         }
       },
       timeline: { title: 'Hosiery Timeline', scroll: 'Scroll to explore', related: 'Related', prev: 'Prev', next: 'Next' },

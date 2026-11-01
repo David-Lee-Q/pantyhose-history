@@ -118,11 +118,11 @@
   /* ---------- 首页 ---------- */
   function renderHome(app) {
     const entries = [
-      { route: 'timeline', ico: '🕰️' },
-      { route: 'material', ico: '🧵' },
-      { route: 'process', ico: '⚙️' },
+      { route: 'timeline', ico: '🕰️', badge: true },
+      { route: 'material', ico: '🧵', badge: true },
+      { route: 'process', ico: '⚙️', badge: true },
       { route: 'style', ico: '👗' },
-      { route: 'company', ico: '🏢' },
+      { route: 'company', ico: '🏢', badge: true },
       { route: 'assistant', ico: '🎯' }
     ];
     app.innerHTML = `
@@ -140,12 +140,26 @@
       <div class="section-grid">
         ${entries.map(e => `
           <div class="entry-card" onclick="location.hash='/${e.route}'">
+            ${e.badge ? `<span class="entry-new">${t('home.guideBand.badge')}</span>` : ''}
             <div class="ico">${e.ico}</div>
             <h3>${t('home.sections.' + e.route + '.t')}</h3>
             <p>${t('home.sections.' + e.route + '.d')}</p>
           </div>
         `).join('')}
       </div>
+      <section class="guide-band">
+        <div class="gb-left">
+          <span class="gb-eyebrow">${t('home.guideBand.eyebrow')}</span>
+          <h2>${t('home.guideBand.title')}</h2>
+          <p>${t('home.guideBand.sub')}</p>
+          <a href="#/guide" class="btn btn-primary">${t('home.guideBand.cta')} →</a>
+        </div>
+        <div class="gb-pills">
+          ${['denier', 'label', 'care', 'myth', 'quiz', 'eco'].map(k =>
+            `<a href="#/guide/${k}" class="gb-pill">${t('guide.tabs.' + k)}</a>`).join('')}
+        </div>
+        <p class="gb-note">${t('home.guideBand.also')}</p>
+      </section>
     `;
   }
 
